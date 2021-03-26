@@ -1,4 +1,4 @@
-###Reto consumir una API (The rick and morty api)
+### Reto consumir una API (The rick and morty api)
 
     Este reto consta de: 
     1.- Consumir la api y obtener la lista de cuantos personajes tiene esta serie
