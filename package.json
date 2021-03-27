@@ -2,10 +2,11 @@
   "name": "asincronismo",
   "version": "1.0.0",
   "description": "Trabajar con asincronismo en JavaScript",
-  "main": "src/index.js",
+  "main": "asincronismo/src/index.js",
   "scripts": {
     "callback": "node asincronismo/src/Callback/index.js",
-    "callback:challenge": "node asincronismo/src/Callback/challenge.js"
+    "callback:challenge": "node asincronismo/src/Callback/challenge.js",
+    "promise": "asincronismo/src/Promise/index.js"
   },
   "repository": {
     "type": "git",
