@@ -1,4 +1,6 @@
 let XMLHttpRequest = requiere('xmlhttprequest').XMLHttpRequest;
+// Lllamado a la API
+let API = 'https://rickandmortyapi.com/api/character/'
 
 // Funcion que nos permitira traer la informacion desde la API
 function fetchData(url_api, callback){
@@ -38,5 +40,26 @@ function fetchData(url_api, callback){
     }
     //Envio de la solicitud.
     xhttp.send();
-
 }
+
+// Resolviendo reto
+//Buiscar la lista de personajes - usaremos esta funcion varias veces de forma anidada para hacer las perticiones
+fetchData(API, function(error1, data1){
+    //Validacion 
+    if(error1) return console.error(error1);
+    //Si funciona
+    // Peticion al primer personaje de la api
+    fetchData(API + data1.results[0].id, function(error2, data2){
+        if(error2) return console.log(error2);
+        // Peticion para saber el origen del personaje
+        fetchData(data2.origin.url, function(error3,data3) {
+            //Manejo de errrores
+            if (error3) return console.error(error3);
+            //Acceder a cuantos personajes existen
+            console.log(data1.info.count);
+            //Obteniendo el nombre de un personaje
+            console.log(data2.name);
+            console.log(data3.dimension);
+        });
+    }) 
+})
