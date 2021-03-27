@@ -31,8 +31,8 @@ function fetchData(url_api, callback){
                //Estandar de node con callbacks, primer parametro error, segundo el resultado
                callback (null, JSON.parse(xhttp.responseText))
             } else {
-            const error = new Error('Error ' + url_api);
-            return callback(error, null)
+                const error = new Error('Error ' + url_api);
+                return callback(error, null)
             }   
         }
     }
