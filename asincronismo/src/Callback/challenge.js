@@ -1,4 +1,4 @@
-let XMLHttpRequest = requiere('xmlhttprequest').XMLHttpRequest;
+let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 // Lllamado a la API
 let API = 'https://rickandmortyapi.com/api/character/'
 
