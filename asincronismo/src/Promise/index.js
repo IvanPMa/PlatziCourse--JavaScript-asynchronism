@@ -31,3 +31,13 @@ const somethingWillHapen2 = () =>{
 somethingWillHapen2 ()
     .then( response => console.log(response))
     .catch(err => console.error(err));
+
+// Ejectuar varias promesas a la vez
+// Promise,all nos permite ejecutar las promesas y retornar un arreglo con los resultados 
+Promise.all([somethingWillHapen(),somethingWillHapen2()])
+.then(response =>{
+    console.log('Array of results', response);
+}) 
+.catch(err =>{
+    console.error(err);
+})
